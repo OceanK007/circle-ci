@@ -1,3 +1,6 @@
+const process = require('process');
+process.env.CHROME_BIN = require('puppeteer').executablePath();
+
 module.exports = function (config) {
     config.set({
         files: [
@@ -36,10 +39,10 @@ module.exports = function (config) {
         concurrency: Infinity,
         browserNoActivityTimeout: 100000,
         customLaunchers: {
-            // MyHeadlessChrome: {
-            //     base: 'ChromeHeadless',
-            //     flags: ['--disable-translate', '--disable-extensions', '--remote-debugging-port=9223']
-            // },
+            MyHeadlessChrome: {
+                base: 'ChromeHeadless',
+                flags: ['--disable-translate', '--disable-extensions', '--remote-debugging-port=9223']
+            },
 
             //By default, the karma-firefox doesn't register the headless version of the browser, so add it manually in the customLaunchers section.
             // FirefoxHeadless: {
