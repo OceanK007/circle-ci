@@ -28,14 +28,16 @@ module.exports = function (config) {
         port: 9876,  // karma web server port
         colors: true,
         logLevel: config.LOG_INFO,
-        browsers: ['ChromeHeadless', 
+        browsers: [
+            'MyHeadlessChrome',
+            //'ChromeHeadless', 
             //'Firefox', 
             //'FirefoxDeveloper', 
             //'FirefoxNightly', 
             //'IE'
         ],
         autoWatch: false,
-        singleRun: false, // Karma captures browsers, runs the tests and exits
+        singleRun: true, // Karma captures browsers, runs the tests and exits
         concurrency: Infinity,
         browserNoActivityTimeout: 100000,
         customLaunchers: {
