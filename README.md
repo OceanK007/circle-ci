@@ -61,5 +61,7 @@ http://www.chaijs.com/api/assert/#method_typeof
 
 https://github.com/gabel/karma-webpack-example/blob/master/karma.conf.js            // Main
 
+https://github.com/karma-runner/karma-chrome-launcher
+
 # URL
 https://webpack.js.org/guides/getting-started/#basic-setup
