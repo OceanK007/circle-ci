@@ -1,4 +1,4 @@
-const process = require('process');
+const process = require('process'); 
 process.env.CHROME_BIN = require('puppeteer').executablePath();
 //process.env.CHROME_BIN = '/usr/bin/chromium-browser';
 
