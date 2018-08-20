@@ -8,7 +8,7 @@ describe('template-one File Test', function()
         it('It should return string', function() 
         {
             let result = templateOne.templateOne1("Ocean");
-            assert.typeOf(result, 'string', 'we have a string');
+            assert.typeOf(result, 'object', 'we have a string');
         })
     });
 
