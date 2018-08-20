@@ -1,5 +1,13 @@
 const process = require('process');
 process.env.CHROME_BIN = require('puppeteer').executablePath();
+//process.env.CHROME_BIN = '/usr/bin/chromium-browser';
+
+//const puppeteer = require('puppeteer');
+// (async () => {
+// 	process.env.CHROME_BIN = await puppeteer.launch({ headless: true, args: ['--no-sandbox', '--disable-setuid-sandbox'] });
+// })();
+
+//process.env.CHROME_BIN = require('puppeteer').launch({ headless: true, args: ['--no-sandbox', '--disable-setuid-sandbox'] });
 
 module.exports = function (config) {
     config.set({
@@ -29,9 +37,10 @@ module.exports = function (config) {
         colors: true,
         logLevel: config.LOG_INFO,
         browsers: [
-            'MyHeadlessChrome',
-            //'ChromeHeadless', 
+            //'MyHeadlessChrome',
+            'ChromeHeadless', 
             //'Firefox', 
+            //'FirefoxHeadless',
             //'FirefoxDeveloper', 
             //'FirefoxNightly', 
             //'IE'
